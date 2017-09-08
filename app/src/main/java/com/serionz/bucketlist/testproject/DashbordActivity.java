@@ -21,9 +21,6 @@ public class DashbordActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView textLayout = (TextView) findViewById(R.id.text_dragon);
-        textLayout.setHint(getString(R.string.str_more_text));
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +50,11 @@ public class DashbordActivity extends AppCompatActivity {
             return true;
         }
 
+        if (id == R.id.create_bucketlist) {
+          TextView dragon = (TextView) findViewById(R.id.text_dragon);
+          dragon.setText("Other text");
+          return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }
